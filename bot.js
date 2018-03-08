@@ -33,23 +33,22 @@ function sendTweet () {
     let minimum = 0
     let maximum = quotes.length -1
     let tweetIndex = getRandomInt(minimum, maximum)
-    let tweet = quotes[tweetIndex]
+    let tweetText = quotes[tweetIndex]
+    let matchUpper = getRandomInt(235, 267)
+    let tweetRegex = new RegExp(`.{1,${matchUpper}}`, 'g')
+    let tweetArray = tweetText.match(tweetRegex)
 
-    if (tweet.length > CHARACTER_LIMIT - BORIS_HANDLE.length) {
-        tweet = tweet.substring(0, CHARACTER_LIMIT - BORIS_HANDLE.length - 1)
-    }
+    tweetArray.forEach(tweet => {
+        tweet = `"${tweet}" ${BORIS_HANDLE}`
+        console.log(`Tweeting: ${tweet}`)
 
-    tweet = `${tweet} ${BORIS_HANDLE}`
-
-    console.log(`Tweeting: ${tweet}`)
-
-    Twitter.post('statuses/update', { status: tweet }, function(err, data, response) {
-        
-        if (!err) {
-            console.log('Success')
-        } else {
-            console.log(err)
-        }
+        Twitter.post('statuses/update', { status: tweet }, function(err, data, response) {
+            if (!err) {
+                console.log('Success')
+            } else {
+                console.log(err)
+            }
+        })
     })
 }
 
