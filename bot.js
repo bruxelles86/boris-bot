@@ -1,10 +1,15 @@
 const twit = require('twit');
-const config = require('./config.js');
+const CONFIG = {
+    consumer_key: process.env.TWITTER_CONSUMER_KEY,  
+    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+    access_token: process.env.TWITTER_ACCESS_KEY,  
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+}
 const BORIS_HANDLE = '@BorisJohnson'
 const CHARACTER_LIMIT = 280
 const INTERVAL = 15 * 60 * 1000
 
-const Twitter = new twit(config);
+const Twitter = new twit(CONFIG);
 
 const quotes = [
     "If we left the EU, we would end this sterile debate, and we would have to recognise that most of our problems are not caused by “Bwussels”, but by chronic British short-termism, inadequate management, sloth, low skills, a culture of easy gratification and underinvestment in both human and physical capital and infrastructure",
