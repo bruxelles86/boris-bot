@@ -54,6 +54,7 @@ function sendTweet () {
 }
 
 function queueTweets () {
+    sendTweet()
     setInterval(sendTweet, INTERVAL)
 }
 
