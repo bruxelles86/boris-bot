@@ -25,7 +25,8 @@ const quotes = [
     "There are tangible benefits to our membership of the European Union.",
     "I believe in the free market of services and all those things.",
     "I am not by any means an ultra-Eurosceptic. In some ways, I am a bit of a fan of the European Union. If we did not have one, we would invent something like it.",
-    "It is hard to think of a measure that the Government could have brought to the House that I could support more unreservedly and with greater pleasure than this Bill to expand the European Union."
+    "It is hard to think of a measure that the Government could have brought to the House that I could support more unreservedly and with greater pleasure than this Bill to expand the European Union.",
+    "Look at Athens and Sparta. Athens was an open city and Sparta kicked people out. Go and look at the ruins of Athens and Sparta now and ask which of the two cities made the greatest contribution to civilisation."
 ]
 
 function getRandomInt(min, max) {
