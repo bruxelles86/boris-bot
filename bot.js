@@ -6,7 +6,8 @@ const CONFIG = {
     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 }
 const BORIS_HANDLE = '@BorisJohnson'
-const CHARACTER_LIMIT = 280
+const CHARACTER_LOWER_LIMIT = 235
+const CHARACTER_UPPER_LIMIT = 265
 const INTERVAL = 15 * 60 * 1000
 
 const Twitter = new twit(CONFIG);
@@ -34,7 +35,7 @@ function sendTweet () {
     let maximum = quotes.length -1
     let tweetIndex = getRandomInt(minimum, maximum)
     let tweetText = quotes[tweetIndex]
-    let matchUpper = getRandomInt(235, 267)
+    let matchUpper = getRandomInt(CHARACTER_LOWER_LIMIT, CHARACTER_UPPER_LIMIT)
     let tweetRegex = new RegExp(`.{1,${matchUpper}}`, 'g')
     let tweetArray = tweetText.match(tweetRegex)
 
