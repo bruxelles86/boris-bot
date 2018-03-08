@@ -8,7 +8,7 @@ const CONFIG = {
 const BORIS_HANDLE = '@BorisJohnson'
 const CHARACTER_LOWER_LIMIT = 235
 const CHARACTER_UPPER_LIMIT = 265
-const INTERVAL = 15 * 60 * 1000
+const INTERVAL = 60 * 60 * 1000
 
 const Twitter = new twit(CONFIG);
 
@@ -23,7 +23,9 @@ const quotes = [
     "London is the most commercially important city in Europe, and it's the most populous city. It should be for the whole of the European continent what New York is to America. That's what it should be.",
     "I’m probably about the only politician I know of who is actually willing to stand up and say that he’s pro-immigration.",
     "There are tangible benefits to our membership of the European Union.",
-    "I believe in the free market of services and all those things."
+    "I believe in the free market of services and all those things.",
+    "I am not by any means an ultra-Eurosceptic. In some ways, I am a bit of a fan of the European Union. If we did not have one, we would invent something like it.",
+    "It is hard to think of a measure that the Government could have brought to the House that I could support more unreservedly and with greater pleasure than this Bill to expand the European Union."
 ]
 
 function getRandomInt(min, max) {
