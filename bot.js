@@ -9,10 +9,11 @@ const BORIS_HANDLE = '@BorisJohnson'
 const CHARACTER_LOWER_LIMIT = 235
 const CHARACTER_UPPER_LIMIT = 265
 const INTERVAL = 60 * 60 * 1000
+let UsingQuotes1 = true
 
 const Twitter = new twit(CONFIG);
 
-const quotes = [
+const quotes1 = [
     "If we left the EU, we would end this sterile debate, and we would have to recognise that most of our problems are not caused by “Bwussels”, but by chronic British short-termism, inadequate management, sloth, low skills, a culture of easy gratification and underinvestment in both human and physical capital and infrastructure",
     "Britain is a great nation, a global force for good. It is surely a boon for the world and for Europe that she should be intimately engaged in the EU. This is a market on our doorstep, ready for further exploitation by British firms: the membership fee seems rather small for all that access.",
     "If we get to this campaign, I would be well up for trying to make the positive case for some of the good things that have come from the single market",
@@ -30,19 +31,33 @@ const quotes = [
     "My ideal world is, we're there, we're in the EU, trying to make it better."
 ]
 
+const quotes2 = []
+
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function sendTweet () {
-    let minimum = 0
-    let maximum = quotes.length -1
-    let tweetIndex = getRandomInt(minimum, maximum)
-    let tweetText = quotes[tweetIndex]
-    let matchUpper = getRandomInt(CHARACTER_LOWER_LIMIT, CHARACTER_UPPER_LIMIT)
-    let tweetRegex = new RegExp(`.{1,${matchUpper}}`, 'g')
-    let tweetArray = tweetText.match(tweetRegex)
+    let tweetArray
 
+    if(UsingQuotes1) {
+        let tweetIndex = getRandomInt(0, quotes1.length -1)
+        let tweetText = quotes1[tweetIndex]
+        quotes2.push(quotes1.splice(tweetIndex, 1)[0])
+        let matchUpper = getRandomInt(CHARACTER_LOWER_LIMIT, CHARACTER_UPPER_LIMIT)
+        let tweetRegex = new RegExp(`.{1,${matchUpper}}`, 'g')
+        tweetArray = tweetText.match(tweetRegex)
+        quotes1.length === 0 ? UsingQuotes1 = false : UsingQuotes1 = true;
+    } else if (!UsingQuotes1) {
+        let tweetIndex = getRandomInt(0, quotes2.length -1)
+        let tweetText = quotes2[tweetIndex]
+        quotes1.push(quotes2.splice(tweetIndex, 1)[0])
+        let matchUpper = getRandomInt(CHARACTER_LOWER_LIMIT, CHARACTER_UPPER_LIMIT)
+        let tweetRegex = new RegExp(`.{1,${matchUpper}}`, 'g')
+        tweetArray = tweetText.match(tweetRegex)
+        quotes2.length === 0 ? UsingQuotes1 = true : UsingQuotes1 = false;
+    }
+    
     tweetArray.forEach(tweet => {
         tweet = `"${tweet}" ${BORIS_HANDLE}`
         console.log(`Tweeting: ${tweet}`)
