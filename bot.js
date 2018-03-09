@@ -37,7 +37,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function sendTweet () {
+async function sendTweet () {
     let tweetArray
 
     if(UsingQuotes1) {
@@ -57,9 +57,11 @@ function sendTweet () {
         tweetArray = tweetText.match(tweetRegex)
         quotes2.length === 0 ? UsingQuotes1 = true : UsingQuotes1 = false;
     }
-    
-    tweetArray.forEach(tweet => {
-        tweet = `"${tweet}" ${BORIS_HANDLE}`
+
+    for (i = 0; i < tweetArray.length; i++) { 
+        tweet = `${tweetArray[i]} ${BORIS_HANDLE}`
+        
+        await sleep(5000)
         console.log(`Tweeting: ${tweet}`)
 
         Twitter.post('statuses/update', { status: tweet }, function(err, data, response) {
@@ -69,6 +71,12 @@ function sendTweet () {
                 console.log(err)
             }
         })
+    }
+}
+
+function sleep(ms){
+    return new Promise(resolve=>{
+        setTimeout(resolve,ms)
     })
 }
 
