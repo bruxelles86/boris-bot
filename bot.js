@@ -27,7 +27,6 @@ const quotes1 = [
     "London is the most commercially important city in Europe, and it's the most populous city. It should be for the whole of the European continent what New York is to America. That's what it should be.",
     "I’m probably about the only politician I know of who is actually willing to stand up and say that he’s pro-immigration.",
     "The trouble is, I am not an ‘outer’.",
-    "Look, I’m rather pro-European, actually. I certainly want a European community where one can go and scoff croissants, drink delicious coffee, learn foreign languages and generally make love to foreign women.",
     "There are tangible benefits to our membership of the European Union.",
     "I believe in the free market of services and all those things.",
     "I am not by any means an ultra-Eurosceptic. In some ways, I am a bit of a fan of the European Union. If we did not have one, we would invent something like it.",
