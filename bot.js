@@ -1,3 +1,4 @@
+const http = require('http')
 const twit = require('twit');
 const CONFIG = {
     consumer_key: process.env.TWITTER_CONSUMER_KEY,  
@@ -90,3 +91,9 @@ function queueTweets () {
 }
 
 queueTweets()
+
+
+// pointless server so that Heroku doesn't crash the app when it's unable to bind it to a port
+
+server = http.createServer(function (req, res) {
+}).listen(process.env.PORT || 5000);
