@@ -96,3 +96,9 @@ queueTweets()
 
 server = http.createServer(function (req, res) {
 }).listen(process.env.PORT || 5000);
+
+server.on('request', (req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.write('Boris Bot is alive \'n\' kickin\'');
+  res.end('\n');
+});
