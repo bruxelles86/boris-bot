@@ -1,3 +1,4 @@
+const newrelic = require('newrelic');
 const http = require('http')
 const twit = require('twit');
 const CONFIG = {
