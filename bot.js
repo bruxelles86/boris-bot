@@ -34,7 +34,8 @@ const quotes1 = [
     "It is hard to think of a measure that the Government could have brought to the House that I could support more unreservedly and with greater pleasure than this Bill to expand the European Union.",
     "Look at Athens and Sparta. Athens was an open city and Sparta kicked people out. Go and look at the ruins of Athens and Sparta now and ask which of the two cities made the greatest contribution to civilisation.",
     "My ideal world is, we're there, we're in the EU, trying to make it better.",
-    "No one seems worried about the UK’s EU referendum. They are smart enough to know that Britain will remain, whatever happens, in a European free-trade zone."
+    "No one seems worried about the UK’s EU referendum. They are smart enough to know that Britain will remain, whatever happens, in a European free-trade zone.",
+    "Together with Nato the European Community, now Union, has helped to deliver a period of peace and prosperity for its people as long as any since the days of the Antonine emperors."
 ]
 
 const quotes2 = []
