@@ -35,7 +35,12 @@ const quotes1 = [
     "Look at Athens and Sparta. Athens was an open city and Sparta kicked people out. Go and look at the ruins of Athens and Sparta now and ask which of the two cities made the greatest contribution to civilisation.",
     "My ideal world is, we're there, we're in the EU, trying to make it better.",
     "No one seems worried about the UK’s EU referendum. They are smart enough to know that Britain will remain, whatever happens, in a European free-trade zone.",
-    "Together with Nato the European Community, now Union, has helped to deliver a period of peace and prosperity for its people as long as any since the days of the Antonine emperors."
+    "Together with Nato the European Community, now Union, has helped to deliver a period of peace and prosperity for its people as long as any since the days of the Antonine emperors.",
+    "I'm one of the politicians willing to stand up for immigration",
+    "There may be a risk that international companies and funds could be put off from investing in the UK by the notion that Britain has somehow cut itself off from a giant European market.",
+    "We may be putting UK firms at a long-term disadvantage if we are no longer able to influence the setting of standards and regulations in Brussels.",
+    "There is a risk that leaving the EU will be globally interpreted as a narrow, xenophobic, backward-looking thing to do.",
+    "I always came down in favour, narrowly, of staying."
 ]
 
 const quotes2 = []
