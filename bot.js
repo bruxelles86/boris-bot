@@ -25,6 +25,8 @@ const quotes1 = [
     "I would vote to stay in the single market. I'm in favour of the single market. I want us to be able to trade freely with our European friends and partners.",
     "We can’t leave Europe. We’re part of the European Continent. What is the English Channel? It’s a primeval river that got slightly too big",
     "Suppose Britain voted tomorrow to come out. We'd still have huge numbers of staff trying to monitor what was going, only we wouldn't have any vote at all. Now I don't think that's actually a prospect that's likely to appeal.",
+    "I'm the great-grandson of Turkish immigrants - where would my family be if London hadn't given sanctuary to my great-grandfather? So I'm totally in favour of people being able to make their lives in another country.",
+    "It is economically illiterate to blame eastern Europeans for getting up early and working hard and being polite and helpful and therefore enabling the London catering trade to flourish",
     "London is the most commercially important city in Europe, and it's the most populous city. It should be for the whole of the European continent what New York is to America. That's what it should be.",
     "I’m probably about the only politician I know of who is actually willing to stand up and say that he’s pro-immigration.",
     "The trouble is, I am not an ‘outer’.",
