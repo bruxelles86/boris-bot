@@ -42,7 +42,8 @@ const quotes1 = [
     "There may be a risk that international companies and funds could be put off from investing in the UK by the notion that Britain has somehow cut itself off from a giant European market.",
     "We may be putting UK firms at a long-term disadvantage if we are no longer able to influence the setting of standards and regulations in Brussels.",
     "There is a risk that leaving the EU will be globally interpreted as a narrow, xenophobic, backward-looking thing to do.",
-    "I always came down in favour, narrowly, of staying."
+    "I always came down in favour, narrowly, of staying.",
+    "Personally, I would like to stay in the single market. We need to stay in the council of ministers of the internal market"
 ]
 
 const quotes2 = []
